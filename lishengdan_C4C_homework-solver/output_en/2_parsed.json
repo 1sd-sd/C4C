@@ -1,0 +1,122 @@
+[
+  {
+    "id": "PartA1",
+    "text": "Find the derivative of $x^3 + 2x^2 - 5x + 1$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "x^3 + 2x^2 - 5x + 1"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartA2",
+    "text": "Evaluate the integral $\\int x^2 \\sin(x) dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int x^2 \\sin(x) dx"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartA3",
+    "text": "Compute the limit $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\lim_{x \\to 0} \\frac{\\sin(x)}{x}"
+      }
+    ],
+    "type": "limit",
+    "sub_problems": []
+  },
+  {
+    "id": "PartA4",
+    "text": "Find the derivative of $e^{x^2} \\cdot \\ln(x)$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "e^{x^2} \\cdot \\ln(x)"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartA5",
+    "text": "Evaluate $\\int_0^1 \\frac{1}{1+x^2} dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int_0^1 \\frac{1}{1+x^2} dx"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartB6",
+    "text": "Solve the equation $x^2 - 5x + 6 = 0$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "x^2 - 5x + 6 = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartB7",
+    "text": "Solve $x^3 - 6x^2 + 11x - 6 = 0$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "x^3 - 6x^2 + 11x - 6 = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartC8",
+    "text": "Compute the determinant of the matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartC9",
+    "text": "Find the eigenvalues of $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "PartD10",
+    "text": "Solve the ODE $y' + 2y = e^{-x}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y' + 2y = e^{-x}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  }
+]

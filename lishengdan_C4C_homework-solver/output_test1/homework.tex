@@ -1,0 +1,259 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Math 1A}
+\lhead{Li Shengdan}
+\rfoot{Page \thepage}
+
+\newcommand{\problem}[1]{\subsection*{Problem #1}}
+\newcommand{\solution}{\paragraph{Solution.}}
+
+\definecolor{solutioncolor}{RGB}{0, 100, 0}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Homework Solutions} \\[0.5em]
+    {\large Math 1A} \\[0.3em]
+    Li Shengdan \quad | \quad 2026-10-05
+\end{center}
+
+\hrule
+\vspace{1em}
+\problem{Q1}
+
+Can the graph of a function have more than one tangent at a given point? If so, graph your answer. If not, explain why.
+
+\solution
+
+In general, a smooth function has exactly one tangent line at each point.
+
+However, a curve (not necessarily the graph of a function) can have multiple tangents at a self-intersection point.
+
+For a function graph, the tangent is unique where the derivative exists.
+
+\textbf{Answer:}
+\[\boxed{\text{Unique tangent where } f'(a) \text{ exists.}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{Q2}
+
+Is there a function whose graph doesn't have a tangent at some point? If so, graph your answer. If not, explain why.
+
+\solution
+
+Yes. A function may fail to have a tangent at a point where it is not differentiable.
+
+Examples: $f(x) = |x|$ at $x = 0$ (corner), $f(x) = x^{1/3}$ at $x = 0$ (vertical tangent/cusp).
+
+\textbf{Answer:}
+\[\boxed{\text{Yes: } f(x) = |x| \text{ at } x = 0 \text{ (corner)}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P1}
+
+Suppose $\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\delta$ of 0?
+
+\solution
+
+x within δ of 0: $|x| < \delta$, i.e. $-\delta < x < \delta$
+
+\textbf{Answer:} $|x| < \delta$, i.e. $-\delta < x < \delta$
+
+\textbf{(a)}
+The set of all $x$ within $\delta$ of 0: $-\delta < x < \delta$
+$\boxed{-\delta < x < \delta}$
+
+\textbf{(b)}
+$|x| < \delta$
+$\boxed{|x| < \delta}$
+
+\textbf{(c)}
+$(-\delta, \delta)$
+$\boxed{(-\delta, \delta)}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P2}
+
+Suppose $a$ is a real number and $\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\delta$ of $a$?
+
+\solution
+
+x within δ of a: $|x - a| < \delta$, i.e. $a - \delta < x < a + \delta$
+
+\textbf{Answer:} $|x - a| < \delta$, i.e. $a - \delta < x < a + \delta$
+
+\textbf{(a)}
+[Number line with open circles at endpoints, center marked]
+$\boxed{\text{See graph}}$
+
+\textbf{(b)}
+$a - \delta < x < a + \delta$
+Equivalently: $-\delta < x - a < \delta$
+$\boxed{a - \delta < x < a + \delta}$
+
+\textbf{(c)}
+$|x - a| < \delta$
+$\boxed{|x - a| < \delta}$
+
+\textbf{(d)}
+$(a - \delta, a + \delta)$
+$\boxed{(a - \delta, a + \delta)}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P3}
+
+Suppose $a$ is a real number and $\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\delta$ of $a$, but not equal to $a$:
+
+\solution
+
+x within δ of a, not equal to a: $0 < |x - a| < \delta$
+
+\textbf{Answer:} $0 < |x - a| < \delta$
+
+\textbf{(a)}
+[Number line with open circles at endpoints, center marked]
+$\boxed{\text{See graph}}$
+
+\textbf{(b)}
+$a - \delta < x < a + \delta, \quad x \neq a$
+Or equivalently: $a - \delta < x < a$ or $a < x < a + \delta$
+$\boxed{a - \delta < x < a + \delta, \quad x \neq a}$
+
+\textbf{(c)}
+$0 < |x - a| < \delta$
+$\boxed{0 < |x - a| < \delta}$
+
+\textbf{(d)}
+$(a - \delta, a) \cup (a, a + \delta)$
+$\boxed{(a - \delta, a) \cup (a, a + \delta)}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P4}
+
+Let $f(x) = x^2$.
+
+\solution
+
+Given: $f(x) = x^{2}$
+
+\textbf{Answer:}
+\[\boxed{f(x) = x^{2}}\]
+
+\textbf{(a)}
+Need: $9.0 - 1 < x^{2} < 9.0 + 1$
+i.e. $8.0 < x^{2} < 10.0$
+Solving: $x \in (2.82842712474619, 3.16227766016838)$ (positive $x$ only)
+$\boxed{(2.82842712474619, 3.16227766016838)}$
+
+\textbf{(b)}
+Need: $|x - 3| < \delta \Rightarrow |x^{2} - 9.0| < 1$
+Boundaries: $x^{2} = 10.0 \Rightarrow x = \left[ -3.16227766016838, \  3.16227766016838\right]$
+           $x^{2} = 8.0 \Rightarrow x = \left[ -2.82842712474619, \  2.82842712474619\right]$
+Minimum distance from $x = 3$: $\delta = 0.16227766016838$
+$\boxed{\delta = 0.16227766016838}$
+
+\textbf{(c)}
+\textit{\color{red} 无法解析 ε-δ 计算子题}
+
+\textbf{(d)}
+Yes, this is true.
+For any $\varepsilon > 0$, we can find $\delta > 0$ such that
+$|x - a| < \delta \Rightarrow |x^{2} - L| < \varepsilon$.
+This follows because $f(x)$ is continuous at $x = a$.
+$\boxed{\text{Yes (continuity)}}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{AP1}
+
+Graph $y = 2x - x^2$. For which points $a$ is the tangent line to the curve at the point $(a, 2a - a^2)$ a horizontal line? How is the value of $2x - x^2$ at these points related to the values of $2x - x^2$ at other points?
+
+\solution
+
+Given: $y = - x^{2} + 2 x$
+
+Derivative: $y' = 2 - 2 x$
+
+Horizontal tangent where $y' = 0$: $2 - 2 x = 0$
+
+Solutions: $x = \left[ 1\right]$
+
+Points: $(1, 1)$
+
+$f''(1) = -2 < 0$: this is a maximum.
+
+The value $1$ is the maximum of $- x^{2} + 2 x$.
+
+\textbf{Answer:}
+\[\boxed{(1, 1)}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{AP2}
+
+The point $(2, 0)$ is on the curve $y = 2x - x^2$.
+
+\solution
+
+Given: $y = - x^{2} + 2 x$
+
+Derivative: $y' = 2 - 2 x$
+
+At point $(2, 0)$:
+
+Slope: $f'(2) = -2$
+
+Tangent line: $y = 4 - 2 x$
+
+\textbf{Answer:}
+\[\boxed{4 - 2 x}\]
+
+\textbf{(a)}
+Draw line through $(2, 0)$ with slope $-2$
+$\boxed{\text{Line with slope } -2}$
+
+\textbf{(b)}
+Slope at $x=2$: $-2$
+Tangent: $y - 0 = -2(x - 2)$
+$y = 4 - 2 x$
+$\boxed{y = 4 - 2 x}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+
+\vspace{2em}
+\noindent\textit{Auto-generated: 8/8 problems solved by SymPy.}
+\end{document}

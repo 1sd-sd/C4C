@@ -1,0 +1,238 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Mathematics}
+\lhead{Li Shengdan}
+\rfoot{第 \thepage 页}
+
+\newcommand{\problem}[1]{\subsection*{题 #1}}
+\newcommand{\solution}{\paragraph{解.}}
+
+\definecolor{solutioncolor}{RGB}{0, 100, 0}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Homework Solutions} \\[0.5em]
+    {\large Mathematics} \\[0.3em]
+    Li Shengdan \quad | \quad 2026-10-05
+\end{center}
+
+\hrule
+\vspace{1em}
+\problem{PartA1}
+
+Find the derivative of $x^3 + 2x^2 - 5x + 1$.
+
+\solution
+
+对多项式逐项求导：$(x^3)' = 3x^2$
+
+$(2x^2)' = 4x$
+
+$(-5x)' = -5$
+
+$(1)' = 0$
+
+合并得 $3x^2 + 4x - 5$
+
+\textbf{Answer:}
+\[\boxed{3x^2 + 4x - 5}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartA2}
+
+Evaluate the integral $\int x^2 \sin(x) dx$.
+
+\solution
+
+使用分部积分，令 $u = x^2$，$dv = \sin(x)dx$，则 $du = 2x\,dx$，$v = -\cos(x)$
+
+$\int x^2\sin(x)dx = -x^2\cos(x) + 2\int x\cos(x)dx$
+
+对 $\int x\cos(x)dx$ 再次分部积分：$u = x$，$dv = \cos(x)dx$，得 $x\sin(x) - \int \sin(x)dx = x\sin(x) + \cos(x)$
+
+代回得 $-x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C$
+
+\textbf{Answer:}
+\[\boxed{-x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartA3}
+
+Compute the limit $\lim_{x \to 0} \frac{\sin(x)}{x}$.
+
+\solution
+
+$\lim_{x \to 0} \frac{\sin{\left(x \right)}}{x} = 1$
+
+\textbf{Answer:}
+\[\boxed{1}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartA4}
+
+Find the derivative of $e^{x^2} \cdot \ln(x)$.
+
+\solution
+
+使用乘积法则：$(uv)' = u'v + uv'$，其中 $u = e^{x^2}$，$v = \ln(x)$
+
+$u' = e^{x^2} \cdot 2x$（链式法则）
+
+$v' = \frac{1}{x}$
+
+因此导数为 $2x e^{x^2}\ln(x) + \frac{e^{x^2}}{x}$
+
+\textbf{Answer:}
+\[\boxed{2x e^{x^2}\ln(x) + \frac{e^{x^2}}{x}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartA5}
+
+Evaluate $\int_0^1 \frac{1}{1+x^2} dx$.
+
+\solution
+
+$\frac{1}{1+x^2}$ 的原函数为 $\arctan(x)$
+
+由牛顿-莱布尼茨公式：$\int_0^1 \frac{1}{1+x^2}dx = \arctan(1) - \arctan(0)$
+
+$\arctan(1) = \frac{\pi}{4}$，$\arctan(0) = 0$
+
+故积分值为 $\frac{\pi}{4}$
+
+\textbf{Answer:}
+\[\boxed{\frac{\pi}{4}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartB6}
+
+Solve the equation $x^2 - 5x + 6 = 0$.
+
+\solution
+
+因式分解：$x^2 - 5x + 6 = (x-2)(x-3)$
+
+令 $(x-2)(x-3) = 0$
+
+得 $x = 2$ 或 $x = 3$
+
+\textbf{Answer:}
+\[\boxed{x = 2 \text{ 或 } x = 3}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartB7}
+
+Solve $x^3 - 6x^2 + 11x - 6 = 0$.
+
+\solution
+
+试根 $x=1$：$1 - 6 + 11 - 6 = 0$，故 $(x-1)$ 是因子
+
+多项式除法：$x^3 - 6x^2 + 11x - 6 = (x-1)(x^2 - 5x + 6)$
+
+继续分解：$x^2 - 5x + 6 = (x-2)(x-3)$
+
+因此 $x^3 - 6x^2 + 11x - 6 = (x-1)(x-2)(x-3) = 0$
+
+得 $x = 1$，$x = 2$ 或 $x = 3$
+
+\textbf{Answer:}
+\[\boxed{x = 1, x = 2 \text{ 或 } x = 3}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartC8}
+
+Compute the determinant of the matrix $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$.
+
+\solution
+
+矩阵 $A = \left[\begin{matrix}1 & 2\\3 & 4\end{matrix}\right]$
+
+按行列式定义展开（SymPy 符号计算，逐步约化）
+
+$\det(A) = -2$
+
+\textbf{Answer:}
+\[\boxed{-2}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartC9}
+
+Find the eigenvalues of $A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$.
+
+\solution
+
+矩阵 $A = \left[\begin{matrix}2 & 1\\1 & 2\end{matrix}\right]$
+
+特征方程 $\det(A - \lambda I) = 0$，展开求解：
+
+$\lambda = 3$, $\lambda = 1$
+
+特征值: $\lambda_{1} = 3, \; \lambda_{2} = 1$
+
+\textbf{Answer:}
+\[\boxed{\lambda_{1} = 3, \; \lambda_{2} = 1}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{PartD10}
+
+Solve the ODE $y' + 2y = e^{-x}$.
+
+\solution
+
+解析得到微分方程: $2 y{\left(x \right)} + \frac{d}{d x} y{\left(x \right)} - e^{- x} = 0$
+
+SymPy dsolve 求解（1 阶）
+
+通解: $y = \left(C_{1} e^{- x} + 1\right) e^{- x}$（含任意常数 C1）
+
+\textbf{Answer:}
+\[\boxed{y = \left(C_{1} e^{- x} + 1\right) e^{- x}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+
+\vspace{2em}
+\noindent\textit{Auto-generated: 10/10 problems solved by SymPy.}
+\end{document}

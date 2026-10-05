@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1",
+    "text": "求解初值问题：\n$$y' + 2y = e^{-x}, \\quad y(0) = 1$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "y' + 2y = e^{-x}, \\quad y(0) = 1"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "2",
+    "text": "求二阶常系数齐次方程的通解：\n$$y'' - 5y' + 6y = 0$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "y'' - 5y' + 6y = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "3",
+    "text": "求解初值问题：\n$$y'' + 4y' + 4y = 0, \\quad y(0) = 1, \\quad y'(0) = 0$$",
+    "math_expressions": [
+      {
+        "type": "display",
+        "latex": "y'' + 4y' + 4y = 0, \\quad y(0) = 1, \\quad y'(0) = 0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "4",
+    "text": "（证明题）证明：若 $y_1$ 与 $y_2$ 是二阶齐次线性常系数方程 $y'' + py' + qy = 0$ 的两个解，则它们的任意线性组合 $y = C_1 y_1 + C_2 y_2$（$C_1, C_2$ 为任意常数）也是该方程的解，并说明该结论在何种条件下可以保证 $y$ 是通解。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y_1"
+      },
+      {
+        "type": "inline",
+        "latex": "y_2"
+      },
+      {
+        "type": "inline",
+        "latex": "y'' + py' + qy = 0"
+      },
+      {
+        "type": "inline",
+        "latex": "y = C_1 y_1 + C_2 y_2"
+      },
+      {
+        "type": "inline",
+        "latex": "C_1, C_2"
+      },
+      {
+        "type": "inline",
+        "latex": "y"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  }
+]

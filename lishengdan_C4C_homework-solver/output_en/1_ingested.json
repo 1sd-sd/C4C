@@ -1,0 +1,23 @@
+{
+  "source_file": "sample_homework.md",
+  "format": ".md",
+  "raw_text": "# Calculus & Linear Algebra — Homework 3\n\n## Part A: Calculus\n\nProblem 1. Find the derivative of $x^3 + 2x^2 - 5x + 1$.\n\nProblem 2. Evaluate the integral $\\int x^2 \\sin(x) dx$.\n\nProblem 3. Compute the limit $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$.\n\nProblem 4. Find the derivative of $e^{x^2} \\cdot \\ln(x)$.\n\nProblem 5. Evaluate $\\int_0^1 \\frac{1}{1+x^2} dx$.\n\n## Part B: Equations\n\nProblem 6. Solve the equation $x^2 - 5x + 6 = 0$.\n\nProblem 7. Solve $x^3 - 6x^2 + 11x - 6 = 0$.\n\n## Part C: Linear Algebra\n\nProblem 8. Compute the determinant of the matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$.\n\nProblem 9. Find the eigenvalues of $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$.\n\n## Part D: Differential Equations\n\nProblem 10. Solve the ODE $y' + 2y = e^{-x}$.\n",
+  "sections": [
+    {
+      "title": "Part A: Calculus",
+      "content": "Problem 1. Find the derivative of $x^3 + 2x^2 - 5x + 1$.\n\nProblem 2. Evaluate the integral $\\int x^2 \\sin(x) dx$.\n\nProblem 3. Compute the limit $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$.\n\nProblem 4. Find the derivative of $e^{x^2} \\cdot \\ln(x)$.\n\nProblem 5. Evaluate $\\int_0^1 \\frac{1}{1+x^2} dx$."
+    },
+    {
+      "title": "Part B: Equations",
+      "content": "Problem 6. Solve the equation $x^2 - 5x + 6 = 0$.\n\nProblem 7. Solve $x^3 - 6x^2 + 11x - 6 = 0$."
+    },
+    {
+      "title": "Part C: Linear Algebra",
+      "content": "Problem 8. Compute the determinant of the matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$.\n\nProblem 9. Find the eigenvalues of $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$."
+    },
+    {
+      "title": "Part D: Differential Equations",
+      "content": "Problem 10. Solve the ODE $y' + 2y = e^{-x}$."
+    }
+  ]
+}

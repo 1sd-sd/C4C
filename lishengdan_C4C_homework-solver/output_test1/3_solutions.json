@@ -1,0 +1,331 @@
+[
+  {
+    "problem_id": "Q1",
+    "problem_text": "Can the graph of a function have more than one tangent at a given point? If so, graph your answer. If not, explain why.",
+    "solved": true,
+    "steps": [
+      "In general, a smooth function has exactly one tangent line at each point.",
+      "However, a curve (not necessarily the graph of a function) can have multiple tangents at a self-intersection point.",
+      "For a function graph, the tangent is unique where the derivative exists."
+    ],
+    "answer": "A function graph has at most one tangent where the derivative exists.",
+    "answer_latex": "\\text{Unique tangent where } f'(a) \\text{ exists.}",
+    "solver": "conceptual_template",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "Q2",
+    "problem_text": "Is there a function whose graph doesn't have a tangent at some point? If so, graph your answer. If not, explain why.",
+    "solved": true,
+    "steps": [
+      "Yes. A function may fail to have a tangent at a point where it is not differentiable.",
+      "Examples: $f(x) = |x|$ at $x = 0$ (corner), $f(x) = x^{1/3}$ at $x = 0$ (vertical tangent/cusp)."
+    ],
+    "answer": "Yes, e.g. f(x) = |x| at x = 0.",
+    "answer_latex": "\\text{Yes: } f(x) = |x| \\text{ at } x = 0 \\text{ (corner)}",
+    "solver": "conceptual_template",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "P1",
+    "problem_text": "Suppose $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of 0?",
+    "solved": true,
+    "steps": [
+      "x within δ of 0: $|x| < \\delta$, i.e. $-\\delta < x < \\delta$"
+    ],
+    "answer": "x within δ of 0: $|x| < \\delta$, i.e. $-\\delta < x < \\delta$",
+    "answer_latex": "$|x| < \\delta$, i.e. $-\\delta < x < \\delta$",
+    "solver": "epsilon_delta_template",
+    "sub_solutions": [
+      {
+        "problem_id": "a",
+        "problem_text": "Using inequalities ($<, >$).",
+        "solved": true,
+        "steps": [
+          "The set of all $x$ within $\\delta$ of 0: $-\\delta < x < \\delta$"
+        ],
+        "answer": "-\\delta < x < \\delta",
+        "answer_latex": "-\\delta < x < \\delta",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "b",
+        "problem_text": "Using absolute value notation.",
+        "solved": true,
+        "steps": [
+          "$|x| < \\delta$"
+        ],
+        "answer": "|x| < \\delta",
+        "answer_latex": "|x| < \\delta",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "c",
+        "problem_text": "Using interval notation.",
+        "solved": true,
+        "steps": [
+          "$(-\\delta, \\delta)$"
+        ],
+        "answer": "(-\\delta, \\delta)",
+        "answer_latex": "(-\\delta, \\delta)",
+        "solver": "sympy",
+        "sub_solutions": []
+      }
+    ]
+  },
+  {
+    "problem_id": "P2",
+    "problem_text": "Suppose $a$ is a real number and $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of $a$?",
+    "solved": true,
+    "steps": [
+      "x within δ of a: $|x - a| < \\delta$, i.e. $a - \\delta < x < a + \\delta$"
+    ],
+    "answer": "x within δ of a: $|x - a| < \\delta$, i.e. $a - \\delta < x < a + \\delta$",
+    "answer_latex": "$|x - a| < \\delta$, i.e. $a - \\delta < x < a + \\delta$",
+    "solver": "epsilon_delta_template",
+    "sub_solutions": [
+      {
+        "problem_id": "a",
+        "problem_text": "Graphically, as on the line above.",
+        "solved": true,
+        "steps": [
+          "[Number line with open circles at endpoints, center marked]"
+        ],
+        "answer": "\\text{See graph}",
+        "answer_latex": "\\text{See graph}",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "b",
+        "problem_text": "Using inequalities. There are at least two ways to do this. Find both.",
+        "solved": true,
+        "steps": [
+          "$a - \\delta < x < a + \\delta$",
+          "Equivalently: $-\\delta < x - a < \\delta$"
+        ],
+        "answer": "a - \\delta < x < a + \\delta",
+        "answer_latex": "a - \\delta < x < a + \\delta",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "c",
+        "problem_text": "Using absolute value notation.",
+        "solved": true,
+        "steps": [
+          "$|x - a| < \\delta$"
+        ],
+        "answer": "|x - a| < \\delta",
+        "answer_latex": "|x - a| < \\delta",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "d",
+        "problem_text": "Using interval notation.",
+        "solved": true,
+        "steps": [
+          "$(a - \\delta, a + \\delta)$"
+        ],
+        "answer": "(a - \\delta, a + \\delta)",
+        "answer_latex": "(a - \\delta, a + \\delta)",
+        "solver": "sympy",
+        "sub_solutions": []
+      }
+    ]
+  },
+  {
+    "problem_id": "P3",
+    "problem_text": "Suppose $a$ is a real number and $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of $a$, but not equal to $a$:",
+    "solved": true,
+    "steps": [
+      "x within δ of a, not equal to a: $0 < |x - a| < \\delta$"
+    ],
+    "answer": "x within δ of a, not equal to a: $0 < |x - a| < \\delta$",
+    "answer_latex": "$0 < |x - a| < \\delta$",
+    "solver": "epsilon_delta_template",
+    "sub_solutions": [
+      {
+        "problem_id": "a",
+        "problem_text": "Graphically.",
+        "solved": true,
+        "steps": [
+          "[Number line with open circles at endpoints, center marked]"
+        ],
+        "answer": "\\text{See graph}",
+        "answer_latex": "\\text{See graph}",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "b",
+        "problem_text": "Using inequalities.",
+        "solved": true,
+        "steps": [
+          "$a - \\delta < x < a + \\delta, \\quad x \\neq a$",
+          "Or equivalently: $a - \\delta < x < a$ or $a < x < a + \\delta$"
+        ],
+        "answer": "a - \\delta < x < a + \\delta, \\quad x \\neq a",
+        "answer_latex": "a - \\delta < x < a + \\delta, \\quad x \\neq a",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "c",
+        "problem_text": "Using absolute value notation.",
+        "solved": true,
+        "steps": [
+          "$0 < |x - a| < \\delta$"
+        ],
+        "answer": "0 < |x - a| < \\delta",
+        "answer_latex": "0 < |x - a| < \\delta",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "d",
+        "problem_text": "Using interval notation.",
+        "solved": true,
+        "steps": [
+          "$(a - \\delta, a) \\cup (a, a + \\delta)$"
+        ],
+        "answer": "(a - \\delta, a) \\cup (a, a + \\delta)",
+        "answer_latex": "(a - \\delta, a) \\cup (a, a + \\delta)",
+        "solver": "sympy",
+        "sub_solutions": []
+      }
+    ]
+  },
+  {
+    "problem_id": "P4",
+    "problem_text": "Let $f(x) = x^2$.",
+    "solved": true,
+    "steps": [
+      "Given: $f(x) = x^{2}$"
+    ],
+    "answer": "f(x) = x^{2}",
+    "answer_latex": "f(x) = x^{2}",
+    "solver": "epsilon_delta_computation",
+    "sub_solutions": [
+      {
+        "problem_id": "a",
+        "problem_text": "Find all the positive numbers $x$ such that $f(x)$ is within 1 of 9.",
+        "solved": true,
+        "steps": [
+          "Need: $9.0 - 1 < x^{2} < 9.0 + 1$",
+          "i.e. $8.0 < x^{2} < 10.0$",
+          "Solving: $x \\in (2.82842712474619, 3.16227766016838)$ (positive $x$ only)"
+        ],
+        "answer": "(2.82842712474619, 3.16227766016838)",
+        "answer_latex": "(2.82842712474619, 3.16227766016838)",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "b",
+        "problem_text": "Find a real number $\\delta$ such that whenever $x$ is within $\\delta$ of 3, $f(x)$ is within 1 of 9.",
+        "solved": true,
+        "steps": [
+          "Need: $|x - 3| < \\delta \\Rightarrow |x^{2} - 9.0| < 1$",
+          "Boundaries: $x^{2} = 10.0 \\Rightarrow x = \\left[ -3.16227766016838, \\  3.16227766016838\\right]$",
+          "           $x^{2} = 8.0 \\Rightarrow x = \\left[ -2.82842712474619, \\  2.82842712474619\\right]$",
+          "Minimum distance from $x = 3$: $\\delta = 0.16227766016838$"
+        ],
+        "answer": "\\delta = 0.16227766016838",
+        "answer_latex": "\\delta = 0.16227766016838",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "c",
+        "problem_text": "Find a real number $\\delta$ such that whenever $x$ is within $\\delta$ of 3, $f(x)$ is within $1/2$ of 9.",
+        "solved": false,
+        "steps": [],
+        "answer": null,
+        "answer_latex": "",
+        "reason": "无法解析 ε-δ 计算子题",
+        "solver": "none",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "d",
+        "problem_text": "Is it true that for any positive number $\\varepsilon$, there is a positive $\\delta$ so that $f(x)$ is within $\\varepsilon$ of 9 whenever $x$ is within $\\delta$ of 3?",
+        "solved": true,
+        "steps": [
+          "Yes, this is true.",
+          "For any $\\varepsilon > 0$, we can find $\\delta > 0$ such that",
+          "$|x - a| < \\delta \\Rightarrow |x^{2} - L| < \\varepsilon$.",
+          "This follows because $f(x)$ is continuous at $x = a$."
+        ],
+        "answer": "\\text{Yes (continuity)}",
+        "answer_latex": "\\text{Yes (continuity)}",
+        "solver": "sympy",
+        "sub_solutions": []
+      }
+    ]
+  },
+  {
+    "problem_id": "AP1",
+    "problem_text": "Graph $y = 2x - x^2$. For which points $a$ is the tangent line to the curve at the point $(a, 2a - a^2)$ a horizontal line? How is the value of $2x - x^2$ at these points related to the values of $2x - x^2$ at other points?",
+    "solved": true,
+    "steps": [
+      "Given: $y = - x^{2} + 2 x$",
+      "Derivative: $y' = 2 - 2 x$",
+      "Horizontal tangent where $y' = 0$: $2 - 2 x = 0$",
+      "Solutions: $x = \\left[ 1\\right]$",
+      "Points: $(1, 1)$",
+      "$f''(1) = -2 < 0$: this is a maximum.",
+      "The value $1$ is the maximum of $- x^{2} + 2 x$."
+    ],
+    "answer": "(1, 1)",
+    "answer_latex": "(1, 1)",
+    "solver": "sympy",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "AP2",
+    "problem_text": "The point $(2, 0)$ is on the curve $y = 2x - x^2$.",
+    "solved": true,
+    "steps": [
+      "Given: $y = - x^{2} + 2 x$",
+      "Derivative: $y' = 2 - 2 x$",
+      "At point $(2, 0)$:",
+      "Slope: $f'(2) = -2$",
+      "Tangent line: $y = 4 - 2 x$"
+    ],
+    "answer": "4 - 2*x",
+    "answer_latex": "4 - 2 x",
+    "solver": "sympy",
+    "sub_solutions": [
+      {
+        "problem_id": "a",
+        "problem_text": "Draw the tangent line to the curve at the point $(2, 0)$.",
+        "solved": true,
+        "steps": [
+          "Draw line through $(2, 0)$ with slope $-2$"
+        ],
+        "answer": "\\text{Line with slope } -2",
+        "answer_latex": "\\text{Line with slope } -2",
+        "solver": "sympy",
+        "sub_solutions": []
+      },
+      {
+        "problem_id": "b",
+        "problem_text": "Try to determine the equation of this tangent line.",
+        "solved": true,
+        "steps": [
+          "Slope at $x=2$: $-2$",
+          "Tangent: $y - 0 = -2(x - 2)$",
+          "$y = 4 - 2 x$"
+        ],
+        "answer": "y = 4 - 2 x",
+        "answer_latex": "y = 4 - 2 x",
+        "solver": "sympy",
+        "sub_solutions": []
+      }
+    ]
+  }
+]

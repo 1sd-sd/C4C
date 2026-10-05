@@ -1,0 +1,324 @@
+[
+  {
+    "id": "Q1",
+    "text": "Can the graph of a function have more than one tangent at a given point? If so, graph your answer. If not, explain why.",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "Q2",
+    "text": "Is there a function whose graph doesn't have a tangent at some point? If so, graph your answer. If not, explain why.",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "P1",
+    "text": "Suppose $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of 0?",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      },
+      {
+        "type": "inline",
+        "latex": "x"
+      },
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      }
+    ],
+    "type": "epsilon_delta",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Using inequalities ($<, >$).",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "<, >"
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "text": "Using absolute value notation.",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "Using interval notation.",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P2",
+    "text": "Suppose $a$ is a real number and $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of $a$?",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "a"
+      },
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      },
+      {
+        "type": "inline",
+        "latex": "x"
+      },
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      },
+      {
+        "type": "inline",
+        "latex": "a"
+      }
+    ],
+    "type": "epsilon_delta",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Graphically, as on the line above.",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "Using inequalities. There are at least two ways to do this. Find both.",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "Using absolute value notation.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "Using interval notation.",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P3",
+    "text": "Suppose $a$ is a real number and $\\delta$ is a positive real number. How do you describe all real numbers $x$ that are within $\\delta$ of $a$, but not equal to $a$:",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "a"
+      },
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      },
+      {
+        "type": "inline",
+        "latex": "x"
+      },
+      {
+        "type": "inline",
+        "latex": "\\delta"
+      },
+      {
+        "type": "inline",
+        "latex": "a"
+      },
+      {
+        "type": "inline",
+        "latex": "a"
+      }
+    ],
+    "type": "epsilon_delta",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Graphically.",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "Using inequalities.",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "Using absolute value notation.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "Using interval notation.",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P4",
+    "text": "Let $f(x) = x^2$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(x) = x^2"
+      }
+    ],
+    "type": "epsilon_delta",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Find all the positive numbers $x$ such that $f(x)$ is within 1 of 9.",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "x"
+          },
+          {
+            "type": "inline",
+            "latex": "f(x)"
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "text": "Find a real number $\\delta$ such that whenever $x$ is within $\\delta$ of 3, $f(x)$ is within 1 of 9.",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          },
+          {
+            "type": "inline",
+            "latex": "x"
+          },
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          },
+          {
+            "type": "inline",
+            "latex": "f(x)"
+          }
+        ]
+      },
+      {
+        "id": "c",
+        "text": "Find a real number $\\delta$ such that whenever $x$ is within $\\delta$ of 3, $f(x)$ is within $1/2$ of 9.",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          },
+          {
+            "type": "inline",
+            "latex": "x"
+          },
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          },
+          {
+            "type": "inline",
+            "latex": "f(x)"
+          },
+          {
+            "type": "inline",
+            "latex": "1/2"
+          }
+        ]
+      },
+      {
+        "id": "d",
+        "text": "Is it true that for any positive number $\\varepsilon$, there is a positive $\\delta$ so that $f(x)$ is within $\\varepsilon$ of 9 whenever $x$ is within $\\delta$ of 3?",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "\\varepsilon"
+          },
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          },
+          {
+            "type": "inline",
+            "latex": "f(x)"
+          },
+          {
+            "type": "inline",
+            "latex": "\\varepsilon"
+          },
+          {
+            "type": "inline",
+            "latex": "x"
+          },
+          {
+            "type": "inline",
+            "latex": "\\delta"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "AP1",
+    "text": "Graph $y = 2x - x^2$. For which points $a$ is the tangent line to the curve at the point $(a, 2a - a^2)$ a horizontal line? How is the value of $2x - x^2$ at these points related to the values of $2x - x^2$ at other points?",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y = 2x - x^2"
+      },
+      {
+        "type": "inline",
+        "latex": "a"
+      },
+      {
+        "type": "inline",
+        "latex": "(a, 2a - a^2)"
+      },
+      {
+        "type": "inline",
+        "latex": "2x - x^2"
+      },
+      {
+        "type": "inline",
+        "latex": "2x - x^2"
+      }
+    ],
+    "type": "tangent",
+    "sub_problems": []
+  },
+  {
+    "id": "AP2",
+    "text": "The point $(2, 0)$ is on the curve $y = 2x - x^2$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "(2, 0)"
+      },
+      {
+        "type": "inline",
+        "latex": "y = 2x - x^2"
+      }
+    ],
+    "type": "tangent",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Draw the tangent line to the curve at the point $(2, 0)$.",
+        "math_expressions": [
+          {
+            "type": "inline",
+            "latex": "(2, 0)"
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "text": "Try to determine the equation of this tangent line.",
+        "math_expressions": []
+      }
+    ]
+  }
+]

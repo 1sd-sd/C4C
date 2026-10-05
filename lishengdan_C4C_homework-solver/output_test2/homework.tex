@@ -1,0 +1,263 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Math 1A}
+\lhead{Li Shengdan}
+\rfoot{第 \thepage 页}
+
+\newcommand{\problem}[1]{\subsection*{题 #1}}
+\newcommand{\solution}{\paragraph{解.}}
+
+\definecolor{solutioncolor}{RGB}{0, 100, 0}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Homework Solutions} \\[0.5em]
+    {\large Math 1A} \\[0.3em]
+    Li Shengdan \quad | \quad 2026-10-05
+\end{center}
+
+\hrule
+\vspace{1em}
+\problem{Q1}
+
+Suppose $f$ is a function and $L$ and $a$ are real numbers.
+
+\solution
+
+See sub-problems for individual limit computations.
+
+\textbf{Answer:}
+\[\boxed{\text{See sub-problems}}\]
+
+\textbf{(a)}
+$\lim_{x \to a} f(x) = L$ means: for every $\varepsilon > 0$ there exists $\delta > 0$ such that
+$0 < |x - a| < \delta \Rightarrow |f(x) - L| < \varepsilon$.
+Informally: we can make $f(x)$ as close to $L$ as we like by taking $x$ sufficiently close to (but not equal to) $a$.
+$\boxed{\forall \varepsilon > 0, \exists \delta > 0: 0 < |x-a| < \delta \Rightarrow |f(x)-L| < \varepsilon}$
+
+\textbf{(b)}
+This requires graphing, which is a visual exercise.
+$\boxed{\text{See graph}}$
+
+\textbf{(c)}
+This requires graphing, which is a visual exercise.
+$\boxed{\text{See graph}}$
+
+\textbf{(d)}
+This requires graphing, which is a visual exercise.
+$\boxed{\text{See graph}}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{Q2}
+
+Is $\infty$ a number? What does $\lim_{x \to a} f(x) = \infty$ mean? Does $\lim_{x \to a} f(x) = \infty$ mean that the limit exists?
+
+\solution
+
+$\infty$ is \textbf{not} a real number.
+
+$\lim_{x \to a} f(x) = \infty$ means that $f(x)$ grows without bound as $x \to a$.
+
+The limit does \textbf{not exist} in the usual sense; we say the limit ``equals infinity'' as a shorthand for divergence.
+
+\textbf{Answer:}
+\[\boxed{\infty \text{ is not a number. The limit does not exist.}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{Q3}
+
+What does the Squeeze Theorem say? Draw a picture illustrating this theorem.
+
+\solution
+
+\textbf{Squeeze Theorem:} If $g(x) \le f(x) \le h(x)$ for all $x$ near $a$ (except possibly at $a$), and $\lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L$, then $\lim_{x \to a} f(x) = L$.
+
+Intuitively: if $f$ is ``squeezed'' between two functions that both converge to $L$, then $f$ must also converge to $L$.
+
+\textbf{Answer:}
+\[\boxed{\text{If } g(x) \le f(x) \le h(x) \text{ and } \lim g = \lim h = L, \text{ then } \lim f = L.}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{Q4}
+
+What do we mean by $\lim_{x \to a^-} f(x) = L$? What is meant by $\lim_{x \to a^+} f(x) = L$? Graph a function $y = f(x)$ and some point $x = a$ where $\lim_{x \to a^-} f(x) \neq \lim_{x \to a^+} f(x)$. Find an algebraic expression for such a function.
+
+\solution
+
+$\lim_{x \to a^-} f(x) = L$: the \textbf{left-hand limit}. As $x$ approaches $a$ from values \emph{less than} $a$, $f(x)$ approaches $L$.
+
+$\lim_{x \to a^+} f(x) = L$: the \textbf{right-hand limit}. As $x$ approaches $a$ from values \emph{greater than} $a$, $f(x)$ approaches $L$.
+
+The two-sided limit $\lim_{x \to a} f(x) = L$ exists if and only if both one-sided limits exist and are equal.
+
+Example: $f(x) = \begin{cases} x & x < 0 \\ x+1 & x \ge 0 \end{cases}$ at $a = 0$: $\lim_{x \to 0^-} f(x) = 0 \neq 1 = \lim_{x \to 0^+} f(x)$.
+
+\textbf{Answer:}
+\[\boxed{\lim_{x \to a^-} f(x): \text{from below}; \quad \lim_{x \to a^+} f(x): \text{from above}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P1}
+
+(a) Is the limit of a sum always the sum of the limits? Give an example where $\lim_{x \to a}[f(x) + g(x)]$ exists even though neither $\lim_{x \to a} f(x)$ nor $\lim_{x \to a} g(x)$ exist.
+
+\solution
+
+No, the limit of a sum is \emph{not} always the sum of the limits.
+
+The \textbf{Sum Law} requires both individual limits to exist: $\lim[f(x)+g(x)] = \lim f(x) + \lim g(x)$ \emph{if both limits exist}.
+
+\textbf{Counterexample:} Let $f(x) = \frac{1}{x}$ and $g(x) = -\frac{1}{x}$. Neither $\lim_{x \to 0} f(x)$ nor $\lim_{x \to 0} g(x)$ exists, but $\lim_{x \to 0}[f(x)+g(x)] = \lim_{x \to 0} 0 = 0$.
+
+\textbf{Answer:}
+\[\boxed{\text{No. } f(x)=1/x,\; g(x)=-1/x: \lim[f+g]=0 \text{ but } \lim f, \lim g \text{ DNE}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P2}
+
+(a) Find $\lim_{x \to 0^+}(\frac{1}{x} - \frac{1}{|x|})$, $\lim_{x \to 0^-}(\frac{1}{x} - \frac{1}{|x|})$, and $\lim_{x \to 0}(\frac{1}{x} - \frac{1}{|x|})$, if they exist.
+
+\solution
+
+$\lim_{x \to 0^+} - \frac{1}{\left|{x}\right|} + \frac{1}{x} = 0$
+
+$\lim_{x \to 0^-} - \frac{1}{\left|{x}\right|} + \frac{1}{x} = -\infty$
+
+$\lim_{x \to 0} - \frac{1}{\left|{x}\right|} + \frac{1}{x} = 0$
+
+\textbf{Answer:}
+\[\boxed{0}\]
+
+\textbf{(b)}
+Computing: $\lim_{x \to 0} \left|{x}\right| = 0$
+This confirms the statement. \qed
+$\boxed{0}$
+
+\textbf{(c)}
+Left limit: $\lim_{x \to 0^-} \frac{\left|{x}\right|}{x} = -1$
+Right limit: $\lim_{x \to 0^+} \frac{\left|{x}\right|}{x} = 1$
+Since $-1 \neq 1$, the limit does not exist.
+$\boxed{\text{DNE}}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{P3}
+
+For what kinds of functions can one evaluate the limit $\lim_{x \to a} f(x)$ by just plugging in $x = a$? Give an example of a function $f(x)$ for which the limit $\lim_{x \to a} f(x)$ exists and can be evaluated, yet for which this substitution doesn't work.
+
+\solution
+
+\textbf{Continuous functions} allow direct substitution: $\lim_{x \to a} f(x) = f(a)$.
+
+This includes polynomials, rational functions (at non-zero denominator points), trigonometric, exponential, and logarithmic functions at points in their domain.
+
+Example where limit exists but substitution fails: $f(x) = \frac{x^2 - 1}{x - 1}$ at $x = 1$. Direct substitution gives $\frac{0}{0}$, but $\lim_{x \to 1} \frac{x^2-1}{x-1} = \lim_{x \to 1}(x+1) = 2$.
+
+\textbf{Answer:}
+\[\boxed{\text{Continuous functions: } \lim_{x \to a} f(x) = f(a)}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{AP1}
+
+Below are listed three limits. Match the best method to each limit and evaluate each limit.
+
+\solution
+
+See sub-problems for individual limit computations.
+
+\textbf{Answer:}
+\[\boxed{\text{See sub-problems}}\]
+
+\textbf{(a)}
+$\lim_{x \to 0} \frac{x^{1000} - 703 x^{506} + \pi x^{17} + 480}{- 372 x^{75} + 39 x^{14} + \sqrt{7} x^{5} - 24} = -20$
+$\boxed{-20}$
+
+\textbf{(b)}
+$\lim_{x \to 4} \frac{x^{2} + 2 x - 24}{x - 4} = 10$
+$\boxed{10}$
+
+\textbf{(c)}
+$\lim_{x \to 0} x^{2} \sin{\left(\frac{1}{x} \right)} = 0$
+$\boxed{0}$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{AP2}
+
+Using a calculator, try to guess $\lim_{n \to \infty} n \sin(\frac{\pi}{n})$. (Remember that $n$ is in radians, not degrees!)
+
+\solution
+
+$\lim_{x \to \infty} n \sin{\left(\frac{\pi}{n} \right)} = \pi$
+
+\textbf{Answer:}
+\[\boxed{\pi}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{AP3}
+
+Draw a circle of radius 1. Inscribe a regular $n$-gon inside it.
+
+\solution
+
+半径为 $1$ 的圆内接正 $n$ 边形，其顶点把圆心角等分为 $n$ 份。
+
+因此每个中心角为 $\frac{2\pi}{n}$（弧度），即 $\frac{360^\circ}{n}$。
+
+取相邻两个顶点与圆心构成一个等腰三角形，两腰长为半径 $1$，夹角为 $\frac{2\pi}{n}$。
+
+该三角形面积为 $\frac12\cdot 1\cdot 1\cdot \sin\frac{2\pi}{n}=\frac12\sin\frac{2\pi}{n}$。
+
+正 $n$ 边形由 $n$ 个这样的三角形组成，所以面积为 $A_n=n\cdot \frac12\sin\frac{2\pi}{n}=\frac n2\sin\frac{2\pi}{n}$。
+
+求极限：令 $x=\frac{2\pi}{n}\to 0$，则 $A_n=\pi\cdot\frac{\sin x}{x}\to \pi$。
+
+直观上，当 $n$ 越来越大时，正 $n$ 边形越来越接近半径为 $1$ 的圆，其面积应趋于圆的面积 $\pi$，与计算结果一致。
+
+\textbf{Answer:}
+\[\boxed{\frac{2\pi}{n}\ (\text{即 }\frac{360^\circ}{n});\quad S_{\triangle}=\frac12\sin\frac{2\pi}{n},\quad S_n=\frac n2\sin\frac{2\pi}{n};\quad \lim_{n\to\infty}S_n=\pi}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+
+\vspace{2em}
+\noindent\textit{Auto-generated: 10/10 problems solved by SymPy.}
+\end{document}

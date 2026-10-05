@@ -1,0 +1,13 @@
+# Core dependencies (required)
+sympy>=1.12
+pyyaml>=6.0
+
+# Extended format support (optional — uncomment as needed)
+# pdfplumber>=0.9          # PDF text extraction
+# python-docx>=0.8         # Word document parsing
+# pytesseract>=0.3         # OCR for scanned PDFs
+# Pillow>=10.0             # Image processing
+
+# Chinese PDF output (optional — requires XeLaTeX + Noto CJK fonts)
+# Install fonts: apt install fonts-noto-cjk  (or download from Google Fonts)
+# Compile: xelatex -interaction=nonstopmode your_file.tex

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "text": "计算下列矩阵的行列式：  \n2 1 3\n \n \nA = 4 5 6\n7 8 9",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "2",
+    "text": "求下列矩阵的逆矩阵： ( )\n2 1\nA =\n5 3",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "3",
+    "text": "求矩阵的特征值与特征向量：\n( )\n4 1\nA =\n2 3",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "4",
+    "text": "解线性方程组：  \n1 2 3 6\n \n \n 2 4 6 12 \n1 1 1 3",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "5",
+    "text": "求下列矩阵的秩：  \n1 2 3\n \n \nA = 2 4 6\n3 6 9",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "6",
+    "text": "已知矩阵 ( ) ( )\n1 2 2 0\nA = , B =\n3 4 1 3\n计算矩阵乘积 AB。",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "7",
+    "text": "用 Gram-Schmidt 方法将下列向量组正交化：\n   \n1 1\n   \n   \nα\n1\n= 1, α\n2\n= 0\n0 1",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "8",
+    "text": "判断矩阵 A 是否可对角化；若可以，求出对角化所需的矩阵 P 与对角矩阵 D：\n( )\n4 1\nA =\n2 3",
+    "math_expressions": [],
+    "type": "conceptual",
+    "sub_problems": []
+  }
+]

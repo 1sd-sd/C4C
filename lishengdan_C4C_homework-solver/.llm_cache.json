@@ -1,0 +1,317 @@
+{
+ "2d386aa4a1695590575e0a436435e622ba299180fed5f7d6b9bc900d4f6e5cac": {
+  "problem_id": "7",
+  "problem_text": "用 Gram-Schmidt 方法将下列向量组正交化：\n$$\\alpha_1 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix} , \\quad \\alpha_2 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$$",
+  "solved": true,
+  "steps": [
+   "取 $\\beta_1=\\alpha_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$。",
+   "计算内积 $\\langle\\alpha_2,\\beta_1\\rangle=1\\cdot1+0\\cdot1+1\\cdot0=1$，$\\langle\\beta_1,\\beta_1\\rangle=1^2+1^2+0^2=2$。",
+   "令 $\\beta_2=\\alpha_2-\\dfrac{\\langle\\alpha_2,\\beta_1\\rangle}{\\langle\\beta_1,\\beta_1\\rangle}\\beta_1=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}-\\dfrac{1}{2}\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}=\\begin{pmatrix}1/2\\\\-1/2\\\\1\\end{pmatrix}$。",
+   "验证正交性：$\\langle\\beta_1,\\beta_2\\rangle=\\dfrac12-\\dfrac12+0=0$，故 $\\beta_1,\\beta_2$ 正交。",
+   "若需单位正交向量组，则取 $e_1=\\dfrac{\\beta_1}{\\|\\beta_1\\|}=\\dfrac{1}{\\sqrt2}\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$，$e_2=\\dfrac{\\beta_2}{\\|\\beta_2\\|}=\\dfrac{1}{\\sqrt{3/2}}\\begin{pmatrix}1/2\\\\-1/2\\\\1\\end{pmatrix}=\\dfrac{1}{\\sqrt6}\\begin{pmatrix}1\\\\-1\\\\2\\end{pmatrix}$。"
+  ],
+  "answer": "正交化结果：β1=(1,1,0)^T，β2=(1/2,-1/2,1)^T；单位正交化结果：e1=(1/√2)(1,1,0)^T，e2=(1/√6)(1,-1,2)^T。",
+  "answer_latex": "\\beta_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix},\\ \\beta_2=\\begin{pmatrix}1/2\\\\-1/2\\\\1\\end{pmatrix};\\quad e_1=\\frac{1}{\\sqrt2}\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix},\\ e_2=\\frac{1}{\\sqrt6}\\begin{pmatrix}1\\\\-1\\\\2\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "40b4af29dd27a72825e80f5e44dc0be98a098279df599b2a27ae1c793e63ed9a": {
+  "problem_id": "1",
+  "problem_text": "求解初值问题：\n$$y' + 2y = e^{-x}, \\quad y(0) = 1$$",
+  "solved": true,
+  "steps": [
+   "这是一阶线性常微分方程 $y' + 2y = e^{-x}$，积分因子为 $\\mu(x)=e^{\\int 2\\,dx}=e^{2x}$。",
+   "两边乘以积分因子：$e^{2x}y' + 2e^{2x}y = e^{x}$，即 $(e^{2x}y)' = e^{x}$。",
+   "两边积分：$e^{2x}y = e^{x} + C$，故 $y = e^{-x} + Ce^{-2x}$。",
+   "代入初值 $y(0)=1$：$1 = 1 + C$，得 $C=0$。",
+   "因此特解为 $y = e^{-x}$。"
+  ],
+  "answer": "y = e^{-x}",
+  "answer_latex": "y = e^{-x}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "2565c411523a7c5e3e1bee531d9c7355f9ea07d2a7be092d791e05270d3600ea": {
+  "problem_id": "2",
+  "problem_text": "求二阶常系数齐次方程的通解：\n$$y'' - 5y' + 6y = 0$$",
+  "solved": true,
+  "steps": [
+   "写出特征方程：$r^2 - 5r + 6 = 0$。",
+   "因式分解：$(r-2)(r-3)=0$，得两个互异实根 $r_1=2,\\ r_2=3$。",
+   "两个线性无关解为 $y_1=e^{2x},\\ y_2=e^{3x}$。",
+   "故通解为 $y = C_1 e^{2x} + C_2 e^{3x}$。"
+  ],
+  "answer": "y = C_1 e^{2x} + C_2 e^{3x}",
+  "answer_latex": "y = C_1 e^{2x} + C_2 e^{3x}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "70df3a2fd74b79fa11a8b1012cbc4518bb16a832399fc65b21da358acd1e87a2": {
+  "problem_id": "3",
+  "problem_text": "求解初值问题：\n$$y'' + 4y' + 4y = 0, \\quad y(0) = 1, \\quad y'(0) = 0$$",
+  "solved": true,
+  "steps": [
+   "写出特征方程：$r^2 + 4r + 4 = 0$。",
+   "因式分解：$(r+2)^2=0$，得二重根 $r=-2$。",
+   "二重根情形通解为 $y = (C_1 + C_2 x)e^{-2x}$。",
+   "求导：$y' = C_2 e^{-2x} - 2(C_1 + C_2 x)e^{-2x}$。",
+   "代入 $y(0)=1$：$C_1 = 1$。",
+   "代入 $y'(0)=0$：$C_2 - 2C_1 = 0$，得 $C_2 = 2$。",
+   "因此特解为 $y = (1 + 2x)e^{-2x}$。"
+  ],
+  "answer": "y = (1 + 2x)e^{-2x}",
+  "answer_latex": "y = (1 + 2x)e^{-2x}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "6d42d1a74519999e2702f0df1a9cbbfeeed55be6f1bf842c28335d8ecb7b1448": {
+  "problem_id": "4",
+  "problem_text": "（证明题）证明：若 $y_1$ 与 $y_2$ 是二阶齐次线性常系数方程 $y'' + py' + qy = 0$ 的两个解，则它们的任意线性组合 $y = C_1 y_1 + C_2 y_2$（$C_1, C_2$ 为任意常数）也是该方程的解，并说明该结论在何种条件下可以保证 $y$ 是通解。",
+  "solved": true,
+  "steps": [
+   "设线性算子 $L[y] = y'' + py' + qy$，则方程可写为 $L[y]=0$。",
+   "算子 $L$ 是线性的：对任意常数 $C_1,C_2$ 与函数 $y_1,y_2$，有 $L[C_1 y_1 + C_2 y_2] = C_1 L[y_1] + C_2 L[y_2]$。",
+   "因为 $y_1,y_2$ 是解，所以 $L[y_1]=0,\\ L[y_2]=0$。",
+   "于是 $L[C_1 y_1 + C_2 y_2] = C_1\\cdot 0 + C_2\\cdot 0 = 0$，即 $y=C_1 y_1 + C_2 y_2$ 也是方程的解。",
+   "要保证 $y=C_1 y_1 + C_2 y_2$ 是通解，需要 $y_1,y_2$ 线性无关，即它们的朗斯基行列式 $W(y_1,y_2)=y_1 y_2' - y_1' y_2 \\neq 0$。",
+   "对于二阶齐次线性方程，两个解线性无关当且仅当 $W \\neq 0$；此时 $\\{y_1,y_2\\}$ 构成基本解组，$y=C_1 y_1 + C_2 y_2$ 包含全部解，即为通解。"
+  ],
+  "answer": "线性组合 y = C_1 y_1 + C_2 y_2 是解；当 y_1 与 y_2 线性无关（即朗斯基行列式 W(y_1,y_2) ≠ 0）时，它是通解。",
+  "answer_latex": "y = C_1 y_1 + C_2 y_2 \\text{ 是解；当 } W(y_1,y_2)=y_1 y_2' - y_1' y_2 \\neq 0 \\text{ 时，它是通解。}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "b03cc9d07a98919c08ed043d7d7991e28280bd50461f8f13a34a60f4c8aaa2dc": {
+  "problem_id": "PartA1",
+  "problem_text": "Find the derivative of $x^3 + 2x^2 - 5x + 1$.",
+  "solved": true,
+  "steps": [
+   "对多项式逐项求导：$(x^3)' = 3x^2$",
+   "$(2x^2)' = 4x$",
+   "$(-5x)' = -5$",
+   "$(1)' = 0$",
+   "合并得 $3x^2 + 4x - 5$"
+  ],
+  "answer": "3x^2 + 4x - 5",
+  "answer_latex": "3x^2 + 4x - 5",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "6c0882898600a6d5fccab66bc989fc1dfd59b063308fa973fe451958ecf2d867": {
+  "problem_id": "PartA2",
+  "problem_text": "Evaluate the integral $\\int x^2 \\sin(x) dx$.",
+  "solved": true,
+  "steps": [
+   "使用分部积分，令 $u = x^2$，$dv = \\sin(x)dx$，则 $du = 2x\\,dx$，$v = -\\cos(x)$",
+   "$\\int x^2\\sin(x)dx = -x^2\\cos(x) + 2\\int x\\cos(x)dx$",
+   "对 $\\int x\\cos(x)dx$ 再次分部积分：$u = x$，$dv = \\cos(x)dx$，得 $x\\sin(x) - \\int \\sin(x)dx = x\\sin(x) + \\cos(x)$",
+   "代回得 $-x^2\\cos(x) + 2x\\sin(x) + 2\\cos(x) + C$"
+  ],
+  "answer": "-x^2*cos(x) + 2*x*sin(x) + 2*cos(x) + C",
+  "answer_latex": "-x^2\\cos(x) + 2x\\sin(x) + 2\\cos(x) + C",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "8b65bfa01186bbaa36693a9ff9bf1bc24bead59cd2d756b9f645c78e5d4dfbec": {
+  "problem_id": "PartA4",
+  "problem_text": "Find the derivative of $e^{x^2} \\cdot \\ln(x)$.",
+  "solved": true,
+  "steps": [
+   "使用乘积法则：$(uv)' = u'v + uv'$，其中 $u = e^{x^2}$，$v = \\ln(x)$",
+   "$u' = e^{x^2} \\cdot 2x$（链式法则）",
+   "$v' = \\frac{1}{x}$",
+   "因此导数为 $2x e^{x^2}\\ln(x) + \\frac{e^{x^2}}{x}$"
+  ],
+  "answer": "2*x*e^(x^2)*ln(x) + e^(x^2)/x",
+  "answer_latex": "2x e^{x^2}\\ln(x) + \\frac{e^{x^2}}{x}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "1324f6e267df7d6befe61c7d1ca99e9a33c6c071bd3513cb744763f4983803c7": {
+  "problem_id": "PartA5",
+  "problem_text": "Evaluate $\\int_0^1 \\frac{1}{1+x^2} dx$.",
+  "solved": true,
+  "steps": [
+   "$\\frac{1}{1+x^2}$ 的原函数为 $\\arctan(x)$",
+   "由牛顿-莱布尼茨公式：$\\int_0^1 \\frac{1}{1+x^2}dx = \\arctan(1) - \\arctan(0)$",
+   "$\\arctan(1) = \\frac{\\pi}{4}$，$\\arctan(0) = 0$",
+   "故积分值为 $\\frac{\\pi}{4}$"
+  ],
+  "answer": "pi/4",
+  "answer_latex": "\\frac{\\pi}{4}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "98a66cb894a48f30e769c40f9253c518bbee540bf29d79f5ed6e595a74171b66": {
+  "problem_id": "PartB6",
+  "problem_text": "Solve the equation $x^2 - 5x + 6 = 0$.",
+  "solved": true,
+  "steps": [
+   "因式分解：$x^2 - 5x + 6 = (x-2)(x-3)$",
+   "令 $(x-2)(x-3) = 0$",
+   "得 $x = 2$ 或 $x = 3$"
+  ],
+  "answer": "x = 2 或 x = 3",
+  "answer_latex": "x = 2 \\text{ 或 } x = 3",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "05b258e8c5136582c3c91fe9f9b384f711355f774fd8ea77de9166e58d4a053e": {
+  "problem_id": "PartB7",
+  "problem_text": "Solve $x^3 - 6x^2 + 11x - 6 = 0$.",
+  "solved": true,
+  "steps": [
+   "试根 $x=1$：$1 - 6 + 11 - 6 = 0$，故 $(x-1)$ 是因子",
+   "多项式除法：$x^3 - 6x^2 + 11x - 6 = (x-1)(x^2 - 5x + 6)$",
+   "继续分解：$x^2 - 5x + 6 = (x-2)(x-3)$",
+   "因此 $x^3 - 6x^2 + 11x - 6 = (x-1)(x-2)(x-3) = 0$",
+   "得 $x = 1$，$x = 2$ 或 $x = 3$"
+  ],
+  "answer": "x = 1, x = 2 或 x = 3",
+  "answer_latex": "x = 1, x = 2 \\text{ 或 } x = 3",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "0a91f73324b40a938d1274d7d516199b811bb7acea3d2b5ad842b2f28bb9b45f": {
+  "problem_id": "AP3",
+  "problem_text": "Draw a circle of radius 1. Inscribe a regular $n$-gon inside it.",
+  "solved": true,
+  "steps": [
+   "半径为 $1$ 的圆内接正 $n$ 边形，其顶点把圆心角等分为 $n$ 份。",
+   "因此每个中心角为 $\\frac{2\\pi}{n}$（弧度），即 $\\frac{360^\\circ}{n}$。",
+   "取相邻两个顶点与圆心构成一个等腰三角形，两腰长为半径 $1$，夹角为 $\\frac{2\\pi}{n}$。",
+   "该三角形面积为 $\\frac12\\cdot 1\\cdot 1\\cdot \\sin\\frac{2\\pi}{n}=\\frac12\\sin\\frac{2\\pi}{n}$。",
+   "正 $n$ 边形由 $n$ 个这样的三角形组成，所以面积为 $A_n=n\\cdot \\frac12\\sin\\frac{2\\pi}{n}=\\frac n2\\sin\\frac{2\\pi}{n}$。",
+   "求极限：令 $x=\\frac{2\\pi}{n}\\to 0$，则 $A_n=\\pi\\cdot\\frac{\\sin x}{x}\\to \\pi$。",
+   "直观上，当 $n$ 越来越大时，正 $n$ 边形越来越接近半径为 $1$ 的圆，其面积应趋于圆的面积 $\\pi$，与计算结果一致。"
+  ],
+  "answer": "中心角为 2π/n（即 360°/n）；一个三角形面积为 (1/2)sin(2π/n)，正 n 边形面积为 (n/2)sin(2π/n)；当 n→∞ 时面积趋于 π，符合直觉，因为正 n 边形趋近于单位圆，而单位圆面积为 π。",
+  "answer_latex": "\\frac{2\\pi}{n}\\ (\\text{即 }\\frac{360^\\circ}{n});\\quad S_{\\triangle}=\\frac12\\sin\\frac{2\\pi}{n},\\quad S_n=\\frac n2\\sin\\frac{2\\pi}{n};\\quad \\lim_{n\\to\\infty}S_n=\\pi",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "f4601060e311dad11aea46697fb7c7eb922f235adeda936765a58dd90a2d62ae": {
+  "problem_id": "1",
+  "problem_text": "计算下列矩阵的行列式：  \n2 1 3\n \n \nA = 4 5 6\n7 8 9",
+  "solved": true,
+  "steps": [
+   "矩阵为 $A=\\begin{pmatrix}2&1&3\\\\4&5&6\\\\7&8&9\\end{pmatrix}$。",
+   "按第一行展开：$\\det A=2\\begin{vmatrix}5&6\\\\8&9\\end{vmatrix}-1\\begin{vmatrix}4&6\\\\7&9\\end{vmatrix}+3\\begin{vmatrix}4&5\\\\7&8\\end{vmatrix}$。",
+   "计算二阶行列式：$\\begin{vmatrix}5&6\\\\8&9\\end{vmatrix}=45-48=-3$，$\\begin{vmatrix}4&6\\\\7&9\\end{vmatrix}=36-42=-6$，$\\begin{vmatrix}4&5\\\\7&8\\end{vmatrix}=32-35=-3$。",
+   "代入得 $\\det A=2(-3)-1(-6)+3(-3)=-6+6-9=-9$。"
+  ],
+  "answer": "-9",
+  "answer_latex": "-9",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "407246929a6406d056610e9927fcc3a589d69111b01d9512d2e8477d3c374ab2": {
+  "problem_id": "2",
+  "problem_text": "求下列矩阵的逆矩阵： ( )\n2 1\nA =\n5 3",
+  "solved": true,
+  "steps": [
+   "矩阵 $A=\\begin{pmatrix}2&1\\\\5&3\\end{pmatrix}$，先求行列式 $\\det A=2\\cdot3-1\\cdot5=1$。",
+   "因为 $\\det A\\neq0$，逆矩阵存在。",
+   "二阶矩阵逆公式：$A^{-1}=\\frac{1}{\\det A}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$。",
+   "代入 $a=2,b=1,c=5,d=3$，得 $A^{-1}=\\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix}$。"
+  ],
+  "answer": "A^{-1} = [[3, -1], [-5, 2]]",
+  "answer_latex": "\\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "599e6554ddf416add9f8b2f057b7f2a9567b77f3888998745f372c3e5c29e24b": {
+  "problem_id": "3",
+  "problem_text": "求矩阵的特征值与特征向量：\n( )\n4 1\nA =\n2 3",
+  "solved": true,
+  "steps": [
+   "矩阵 $A=\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$，特征方程为 $\\det(A-\\lambda I)=0$。",
+   "$\\det\\begin{pmatrix}4-\\lambda&1\\\\2&3-\\lambda\\end{pmatrix}=(4-\\lambda)(3-\\lambda)-2=\\lambda^2-7\\lambda+10=0$。",
+   "解得特征值 $\\lambda_1=5,\\lambda_2=2$。",
+   "对 $\\lambda_1=5$：解 $(A-5I)x=0$，即 $\\begin{pmatrix}-1&1\\\\2&-2\\end{pmatrix}x=0$，得 $x_1=x_2$，取特征向量 $\\begin{pmatrix}1\\\\1\\end{pmatrix}$。",
+   "对 $\\lambda_2=2$：解 $(A-2I)x=0$，即 $\\begin{pmatrix}2&1\\\\2&1\\end{pmatrix}x=0$，得 $2x_1+x_2=0$，取特征向量 $\\begin{pmatrix}1\\\\-2\\end{pmatrix}$。"
+  ],
+  "answer": "特征值 λ1=5 对应特征向量 (1,1)^T；λ2=2 对应特征向量 (1,-2)^T",
+  "answer_latex": "\\lambda_1=5,\\ v_1=\\begin{pmatrix}1\\\\1\\end{pmatrix};\\quad \\lambda_2=2,\\ v_2=\\begin{pmatrix}1\\\\-2\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "85d76819bf028d56843db536c9b428a01f1d370addabb72c2aa2a2362c809148": {
+  "problem_id": "4",
+  "problem_text": "解线性方程组：  \n1 2 3 6\n \n \n 2 4 6 12 \n1 1 1 3",
+  "solved": true,
+  "steps": [
+   "增广矩阵为 $\\begin{pmatrix}1&2&3&6\\\\2&4&6&12\\\\1&1&1&3\\end{pmatrix}$。",
+   "第二行减去第一行的 $2$ 倍：$R_2-2R_1=(0,0,0,0)$，说明第二个方程与第一个方程等价。",
+   "第三行减去第一行：$R_3-R_1=(0,-1,-2,-3)$，即 $-y-2z=-3$，得 $y=3-2z$。",
+   "由第一行 $x+2y+3z=6$，代入 $y=3-2z$：$x+2(3-2z)+3z=6$，得 $x+6-4z+3z=6$，即 $x=z$。",
+   "令 $z=t$，则 $x=t,\\ y=3-2t,\\ z=t$，$t$ 为任意实数。"
+  ],
+  "answer": "x=t, y=3-2t, z=t（t 为任意实数）",
+  "answer_latex": "\\begin{cases}x=t\\\\y=3-2t\\\\z=t\\end{cases},\\ t\\in\\mathbb{R}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "86b9c450ffc615d06e6e9489db89b16c92530b07cab346f35dc765f3bdc1e183": {
+  "problem_id": "5",
+  "problem_text": "求下列矩阵的秩：  \n1 2 3\n \n \nA = 2 4 6\n3 6 9",
+  "solved": true,
+  "steps": [
+   "矩阵 $A=\\begin{pmatrix}1&2&3\\\\2&4&6\\\\3&6&9\\end{pmatrix}$。",
+   "第二行是第一行的 $2$ 倍，第三行是第一行的 $3$ 倍，因此所有行都成比例。",
+   "对矩阵作初等行变换：$R_2-2R_1=0$，$R_3-3R_1=0$，只剩第一行非零。",
+   "非零行数为 $1$，故秩为 $1$。"
+  ],
+  "answer": "1",
+  "answer_latex": "1",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "874e5fdd556dd5ec6c8ce49cce314951760290e2ea40a7231735721b92431258": {
+  "problem_id": "6",
+  "problem_text": "已知矩阵 ( ) ( )\n1 2 2 0\nA = , B =\n3 4 1 3\n计算矩阵乘积 AB。",
+  "solved": true,
+  "steps": [
+   "$A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$，$B=\\begin{pmatrix}2&0\\\\1&3\\end{pmatrix}$。",
+   "$(AB)_{11}=1\\cdot2+2\\cdot1=4$，$(AB)_{12}=1\\cdot0+2\\cdot3=6$。",
+   "$(AB)_{21}=3\\cdot2+4\\cdot1=10$，$(AB)_{22}=3\\cdot0+4\\cdot3=12$。",
+   "所以 $AB=\\begin{pmatrix}4&6\\\\10&12\\end{pmatrix}$。"
+  ],
+  "answer": "AB = [[4, 6], [10, 12]]",
+  "answer_latex": "\\begin{pmatrix}4&6\\\\10&12\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "d9d80836171c7081c07f3511cf82d1e756b11ea10df4df3cd1c4307f95b2cd52": {
+  "problem_id": "7",
+  "problem_text": "用 Gram-Schmidt 方法将下列向量组正交化：\n   \n1 1\n   \n   \nα\n1\n= 1, α\n2\n= 0\n0 1",
+  "solved": true,
+  "steps": [
+   "给定 $\\alpha_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$，$\\alpha_2=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}$。",
+   "取 $\\beta_1=\\alpha_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$。",
+   "计算投影系数：$\\frac{\\alpha_2\\cdot\\beta_1}{\\beta_1\\cdot\\beta_1}=\\frac{1\\cdot1+0\\cdot1+1\\cdot0}{1^2+1^2+0^2}=\\frac{1}{2}$。",
+   "$\\beta_2=\\alpha_2-\\frac{1}{2}\\beta_1=\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}-\\frac{1}{2}\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}=\\begin{pmatrix}1/2\\\\-1/2\\\\1\\end{pmatrix}$。",
+   "可取等价的正交向量组 $\\beta_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix}$，$\\beta_2=\\begin{pmatrix}1\\\\-1\\\\2\\end{pmatrix}$（后者为前者的 $2$ 倍）。"
+  ],
+  "answer": "β1=(1,1,0)^T, β2=(1,-1,2)^T",
+  "answer_latex": "\\beta_1=\\begin{pmatrix}1\\\\1\\\\0\\end{pmatrix},\\quad \\beta_2=\\begin{pmatrix}1\\\\-1\\\\2\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ },
+ "b169f7fefd8fb1762c8904ecab865c069a5dac8fb7c22663b65eb43f3509fc06": {
+  "problem_id": "8",
+  "problem_text": "判断矩阵 A 是否可对角化；若可以，求出对角化所需的矩阵 P 与对角矩阵 D：\n( )\n4 1\nA =\n2 3",
+  "solved": true,
+  "steps": [
+   "矩阵 $A=\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$，特征方程为 $\\det(A-\\lambda I)=\\lambda^2-7\\lambda+10=0$。",
+   "特征值为 $\\lambda_1=5,\\lambda_2=2$，两个互异特征值，故 $A$ 可对角化。",
+   "对 $\\lambda_1=5$：$(A-5I)x=0$ 得 $x_1=x_2$，取特征向量 $p_1=\\begin{pmatrix}1\\\\1\\end{pmatrix}$。",
+   "对 $\\lambda_2=2$：$(A-2I)x=0$ 得 $2x_1+x_2=0$，取特征向量 $p_2=\\begin{pmatrix}1\\\\-2\\end{pmatrix}$。",
+   "令 $P=\\begin{pmatrix}1&1\\\\1&-2\\end{pmatrix}$，$D=\\begin{pmatrix}5&0\\\\0&2\\end{pmatrix}$，则 $A=PDP^{-1}$。"
+  ],
+  "answer": "可对角化，P=[[1,1],[1,-2]]，D=[[5,0],[0,2]]",
+  "answer_latex": "P=\\begin{pmatrix}1&1\\\\1&-2\\end{pmatrix},\\quad D=\\begin{pmatrix}5&0\\\\0&2\\end{pmatrix}",
+  "sub_solutions": [],
+  "reason": ""
+ }
+}

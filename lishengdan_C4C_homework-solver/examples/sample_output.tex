@@ -1,0 +1,198 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Mathematics}
+\lhead{Student}
+\rfoot{Page \thepage}
+
+\newcommand{\problem}[1]{\subsection*{Problem #1}}
+\newcommand{\solution}{\paragraph{Solution.}}
+
+\definecolor{solutioncolor}{RGB}{0, 100, 0}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Homework Solutions} \\[0.5em]
+    {\large Mathematics} \\[0.3em]
+    Student \quad | \quad 2026-04-05
+\end{center}
+
+\hrule
+\vspace{1em}
+\problem{1}
+
+Find the derivative of $x^3 + 2x^2 - 5x + 1$.
+
+\solution
+
+原式: $x^{3} + 2 x^{2} - 5 x + 1$
+
+对 x 求导
+
+结果: $3 x^{2} + 4 x - 5$
+
+\textbf{Answer:}
+\[\boxed{3 x^{2} + 4 x - 5}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{2}
+
+Evaluate the integral $\int x^2 \sin(x) dx$.
+
+\solution
+
+原式: $x^{2} \sin{\left(x \right)}$
+
+对 x 不定积分
+
+结果: $- x^{2} \cos{\left(x \right)} + 2 x \sin{\left(x \right)} + 2 \cos{\left(x \right)} + C$
+
+\textbf{Answer:}
+\[\boxed{- x^{2} \cos{\left(x \right)} + 2 x \sin{\left(x \right)} + 2 \cos{\left(x \right)}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{3}
+
+Compute the limit $\lim_{x \to 0} \frac{\sin(x)}{x}$.
+
+\solution
+
+原式: $\lim_{x \to 0} \frac{\sin{\left(x \right)}}{x}$
+
+结果: $1$
+
+\textbf{Answer:}
+\[\boxed{1}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{4}
+
+Find the derivative of $e^{x^2} \cdot \ln(x)$.
+
+\solution
+
+原式: $e^{x^{2}} \log{\left(x \right)}$
+
+对 x 求导
+
+结果: $2 x e^{x^{2}} \log{\left(x \right)} + \frac{e^{x^{2}}}{x}$
+
+\textbf{Answer:}
+\[\boxed{2 x e^{x^{2}} \log{\left(x \right)} + \frac{e^{x^{2}}}{x}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{5}
+
+Evaluate $\int_0^1 \frac{1}{1+x^2} dx$.
+
+\solution
+
+原式: $\int_{0}^{1} \frac{1}{x^{2} + 1} \, dx$
+
+定积分求解
+
+结果: $\frac{\pi}{4}$
+
+\textbf{Answer:}
+\[\boxed{\frac{\pi}{4}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{6}
+
+Solve the equation $x^2 - 5x + 6 = 0$.
+
+\solution
+
+方程: $x^{2} - 5 x + 6 = 0$
+
+求解 $x$
+
+解: $x = \left[ 2, \  3\right]$
+
+\textbf{Answer:}
+\[\boxed{\left[ 2, \  3\right]}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{7}
+
+Solve $x^3 - 6x^2 + 11x - 6 = 0$.
+
+\solution
+
+方程: $x^{3} - 6 x^{2} + 11 x - 6 = 0$
+
+求解 $x$
+
+解: $x = \left[ 1, \  2, \  3\right]$
+
+\textbf{Answer:}
+\[\boxed{\left[ 1, \  2, \  3\right]}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{8}
+
+Compute the determinant of the matrix $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$.
+
+\textit{\color{red} 未求解: 矩阵解析需要扩展。提示：解析文本中的矩阵元素，构建 sympy.Matrix}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{9}
+
+Find the eigenvalues of $A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$.
+
+\textit{\color{red} 未求解: 矩阵解析需要扩展。提示：M.eigenvals()}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{10}
+
+Solve the ODE $y' + 2y = e^{-x}$.
+
+\textit{\color{red} 未求解: ODE 求解失败: 3*y - exp(-x) is not a solvable differential equation in y(x)}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+
+\vspace{2em}
+\noindent\textit{Auto-generated: 7/10 problems solved by SymPy.}
+\end{document}

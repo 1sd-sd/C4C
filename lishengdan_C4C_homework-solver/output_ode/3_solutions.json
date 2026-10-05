@@ -1,0 +1,64 @@
+[
+  {
+    "problem_id": "1",
+    "problem_text": "求解初值问题：\n$$y' + 2y = e^{-x}, \\quad y(0) = 1$$",
+    "solved": true,
+    "steps": [
+      "解析得到微分方程: $2 y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} - e^{- x} = 0$",
+      "SymPy dsolve 求解（1 阶）",
+      "代入初始条件 $y{\\left(0 \\right)} = 1$",
+      "特解: $y = e^{- x}$"
+    ],
+    "answer": "y = e^{- x}",
+    "answer_latex": "y = e^{- x}",
+    "solver": "sympy_ext",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "2",
+    "problem_text": "求二阶常系数齐次方程的通解：\n$$y'' - 5y' + 6y = 0$$",
+    "solved": true,
+    "steps": [
+      "解析得到微分方程: $6 y{\\left(x \\right)} - 5 \\frac{d}{d x} y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$",
+      "SymPy dsolve 求解（2 阶）",
+      "通解: $y = \\left(C_{1} + C_{2} e^{x}\\right) e^{2 x}$（含任意常数 C1）"
+    ],
+    "answer": "y = \\left(C_{1} + C_{2} e^{x}\\right) e^{2 x}",
+    "answer_latex": "y = \\left(C_{1} + C_{2} e^{x}\\right) e^{2 x}",
+    "solver": "sympy_ext",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "3",
+    "problem_text": "求解初值问题：\n$$y'' + 4y' + 4y = 0, \\quad y(0) = 1, \\quad y'(0) = 0$$",
+    "solved": true,
+    "steps": [
+      "解析得到微分方程: $4 y{\\left(x \\right)} + 4 \\frac{d}{d x} y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$",
+      "SymPy dsolve 求解（2 阶）",
+      "代入初始条件 $y{\\left(0 \\right)} = 1$, $\\left. \\frac{d}{d x} y{\\left(x \\right)} \\right|_{\\substack{ x=0 }} = 0$",
+      "特解: $y = \\left(2 x + 1\\right) e^{- 2 x}$"
+    ],
+    "answer": "y = \\left(2 x + 1\\right) e^{- 2 x}",
+    "answer_latex": "y = \\left(2 x + 1\\right) e^{- 2 x}",
+    "solver": "sympy_ext",
+    "sub_solutions": []
+  },
+  {
+    "problem_id": "4",
+    "problem_text": "（证明题）证明：若 $y_1$ 与 $y_2$ 是二阶齐次线性常系数方程 $y'' + py' + qy = 0$ 的两个解，则它们的任意线性组合 $y = C_1 y_1 + C_2 y_2$（$C_1, C_2$ 为任意常数）也是该方程的解，并说明该结论在何种条件下可以保证 $y$ 是通解。",
+    "solved": true,
+    "steps": [
+      "设线性算子 $L[y] = y'' + py' + qy$，则方程可写为 $L[y]=0$。",
+      "算子 $L$ 是线性的：对任意常数 $C_1,C_2$ 与函数 $y_1,y_2$，有 $L[C_1 y_1 + C_2 y_2] = C_1 L[y_1] + C_2 L[y_2]$。",
+      "因为 $y_1,y_2$ 是解，所以 $L[y_1]=0,\\ L[y_2]=0$。",
+      "于是 $L[C_1 y_1 + C_2 y_2] = C_1\\cdot 0 + C_2\\cdot 0 = 0$，即 $y=C_1 y_1 + C_2 y_2$ 也是方程的解。",
+      "要保证 $y=C_1 y_1 + C_2 y_2$ 是通解，需要 $y_1,y_2$ 线性无关，即它们的朗斯基行列式 $W(y_1,y_2)=y_1 y_2' - y_1' y_2 \\neq 0$。",
+      "对于二阶齐次线性方程，两个解线性无关当且仅当 $W \\neq 0$；此时 $\\{y_1,y_2\\}$ 构成基本解组，$y=C_1 y_1 + C_2 y_2$ 包含全部解，即为通解。"
+    ],
+    "answer": "线性组合 y = C_1 y_1 + C_2 y_2 是解；当 y_1 与 y_2 线性无关（即朗斯基行列式 W(y_1,y_2) ≠ 0）时，它是通解。",
+    "answer_latex": "y = C_1 y_1 + C_2 y_2 \\text{ 是解；当 } W(y_1,y_2)=y_1 y_2' - y_1' y_2 \\neq 0 \\text{ 时，它是通解。}",
+    "reason": "",
+    "solver": "llm:deepseek(cached)",
+    "sub_solutions": []
+  }
+]
